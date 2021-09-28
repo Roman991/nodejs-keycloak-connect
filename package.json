@@ -74,7 +74,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/keycloak/keycloak-nodejs-connect.git"
+    "url": "https://gitlab.adacto.it/adacto-open-source/nodejs-keycloak-connect.git"
   },
-  "bugs": "https://github.com/keycloak/keycloak-nodejs-connect/issues"
+  "bugs": "https://gitlab.adacto.it/adacto-open-source/nodejs-keycloak-connect/-/issues"
 }
