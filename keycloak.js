@@ -59,10 +59,16 @@ var CheckSso = require('./middleware/check-sso');
  *
  */
 function Keycloak (config, keycloakConfig) {
+  // console.log('NODEJS_KC_CONFIG_OBJ', keycloakConfig);
+
   // If keycloakConfig is null, Config() will search for `keycloak.json`.
   this.config = new Config(keycloakConfig);
 
+  // console.log('NODEJS_KC_CONFIG', this.config);
+
   this.grantManager = new GrantManager(this.config);
+
+  // console.log('NODEJS_KC_GRANTMANAGER', this.grantManager);
 
   this.stores = [ BearerStore ];
 

@@ -426,7 +426,7 @@ GrantManager.prototype.validateToken = function validateToken (token, expectedTy
     } else if (token.content.iat < this.notBefore) {
       reject(new Error('invalid token (stale token)'));
     } else if (token.content.iss !== this.iss) {
-      reject(new Error('invalid token (wrong ISS)'));
+      reject(new Error('invalid token (wrong ISS) Expecting: ' + this.iss + ' Got: ' + token.content.iss));
     } else {
       var audienceData = Array.isArray(token.content.aud) ? token.content.aud : [token.content.aud];
       if (expectedType === 'ID') {
